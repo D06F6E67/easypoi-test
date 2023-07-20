@@ -1,13 +1,13 @@
 /**
  * Copyright 2013-2015 JueYue (qrb.jueyue@gmail.com)
- *   
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
@@ -27,7 +27,7 @@ import cn.afterturn.easypoi.test.entity.TeacherEntity;
 import cn.afterturn.easypoi.pdf.PdfExportUtil;
 import cn.afterturn.easypoi.pdf.entity.PdfExportParams;
 
-import com.itextpdf.layout.Document;
+import org.apache.pdfbox.pdmodel.PDDocument;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,7 +40,7 @@ import org.junit.Test;
 public class MultiLineHeadersTest {
 
     List<CourseEntity> list = new ArrayList<CourseEntity>();
-    CourseEntity       courseEntity;
+    CourseEntity courseEntity;
 
     @Before
     public void testBefore() {
@@ -75,17 +75,16 @@ public class MultiLineHeadersTest {
 
     @Test
     public void testExportPdf() {
-        PdfExportParams params   = new PdfExportParams("绝月的测试", "作者绝月");
-        Document        document = null;
+        PdfExportParams params = new PdfExportParams("绝月的测试", "作者绝月");
+        PDDocument document = null;
         try {
             File file = new File("D:/home/excel//MultiLineHeadersTest.testExportPdf.pdf");
             file.createNewFile();
             document = PdfExportUtil.exportPdf(params, CourseEntity.class, list,
-                new FileOutputStream(file));
+                    new FileOutputStream(file));
+            document.save(file);
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            document.close();
         }
     }
 

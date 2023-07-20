@@ -4,7 +4,6 @@ import cn.afterturn.easypoi.entity.ImageEntity;
 import cn.afterturn.easypoi.pdf.PdfExportUtil;
 import cn.afterturn.easypoi.test.word.entity.Person;
 import cn.afterturn.easypoi.word.WordExportUtil;
-import com.itextpdf.layout.Document;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.junit.Test;
 
@@ -43,11 +42,11 @@ public class PdfImgForTemplate {
             image.setType(ImageEntity.URL);
             listImage.add(image);
         }
-        map.put("imglist",listImage);
+        map.put("imglist", listImage);
 
         FileOutputStream fos = new FileOutputStream("D:/home/excel/imgfor.pdf");
-        Document doc = PdfExportUtil.exportPdf(
-                "pdf/imgfor.pdf", map, fos);
+//        Document doc = PdfExportUtil.exportPdf(
+//                "pdf/imgfor.pdf", map, fos);
         fos.close();
     }
 
