@@ -1,7 +1,7 @@
 package cn.afterturn.easypoi.test.csv.read;
 
-import cn.afterturn.easypoi.test.csv.CsvImportUtil;
-import cn.afterturn.easypoi.test.csv.entity.CsvImportParams;
+import cn.afterturn.easypoi.csv.CsvImportUtil;
+import cn.afterturn.easypoi.csv.entity.CsvImportParams;
 import cn.afterturn.easypoi.handler.inter.IReadHandler;
 import cn.afterturn.easypoi.test.entity.MsgClient;
 import cn.afterturn.easypoi.test.excel.read.FileUtilTest;

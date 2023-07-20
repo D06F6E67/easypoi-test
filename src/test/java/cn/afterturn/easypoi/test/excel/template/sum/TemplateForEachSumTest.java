@@ -15,7 +15,6 @@ import cn.afterturn.easypoi.test.entity.temp.PayeeEntity;
 import cn.afterturn.easypoi.test.entity.temp.TemplateExcelExportEntity;
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
 import cn.afterturn.easypoi.excel.entity.TemplateExportParams;
-import cn.afterturn.easypoi.excel.export.styler.ExcelExportStylerColorImpl;
 import cn.afterturn.easypoi.util.PoiMergeCellUtil;
 
 import org.junit.Test;

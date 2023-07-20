@@ -30,27 +30,27 @@ public class HtmlToExcelUtilTest {
         if (!savefile.exists()) {
             savefile.mkdirs();
         }
-        FileOutputStream fos = new FileOutputStream("D:\\home\\lemur\\htmlToExcelByStr.xlsx");
+        FileOutputStream fos = new FileOutputStream("D:\\home\\excel\\htmlToExcelByStr.xlsx");
         workbook.write(fos);
         fos.close();
-        workbook = ExcelXorHtmlUtil.htmlToExcel(html.toString(), ExcelType.HSSF);
-        fos = new FileOutputStream("D:\\home\\lemur\\htmlToExcelByStr.xls");
-        workbook.write(fos);
-        fos.close();
+//        workbook = ExcelXorHtmlUtil.htmlToExcel(html.toString(), ExcelType.HSSF);
+//        fos = new FileOutputStream("D:\\home\\excel\\htmlToExcelByStr.xls");
+//        workbook.write(fos);
+//        fos.close();
     }
 
     @Test
     public void htmlToExcelByIs() throws Exception {
         Workbook workbook = ExcelXorHtmlUtil.htmlToExcel(getClass().getResourceAsStream("/html/sample.html"), ExcelType.XSSF);
-        File savefile = new File("D:\\home\\lemur");
+        File savefile = new File("D:\\home\\excel");
         if (!savefile.exists()) {
             savefile.mkdirs();
         }
-        FileOutputStream fos = new FileOutputStream("D:\\home\\lemur\\htmlToExcelByIs.xlsx");
+        FileOutputStream fos = new FileOutputStream("D:\\home\\excel\\htmlToExcelByIs.xlsx");
         workbook.write(fos);
         fos.close();
         workbook = ExcelXorHtmlUtil.htmlToExcel(getClass().getResourceAsStream("/html/sample.html"), ExcelType.HSSF);
-        fos = new FileOutputStream("D:\\home\\lemur\\htmlToExcelByIs.xls");
+        fos = new FileOutputStream("D:\\home\\excel\\htmlToExcelByIs.xls");
         workbook.write(fos);
         fos.close();
     }

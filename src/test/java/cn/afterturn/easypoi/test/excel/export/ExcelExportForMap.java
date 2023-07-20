@@ -72,6 +72,7 @@ public class ExcelExportForMap {
             List<ExcelExportEntity> entity = new ArrayList<ExcelExportEntity>();
             ExcelExportEntity excelentity = new ExcelExportEntity("部门", "depart");
             excelentity.setMergeVertical(true);
+            excelentity.setWrap(true);
             entity.add(excelentity);
             excelentity = new ExcelExportEntity("姓名", "name");
             excelentity.setMergeVertical(true);
@@ -93,7 +94,7 @@ public class ExcelExportForMap {
             }
             for (int i = 0; i < 10; i++) {
                 map = new HashMap<String, Object>();
-                map.put("depart", "开发部");
+                map.put("depart", "开发\r\n部");
                 map.put("name", "小蓝" + i / 3);
                 map.put("phone", "1871234567" + i / 2);
                 list.add(map);

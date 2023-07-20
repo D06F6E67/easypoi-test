@@ -24,7 +24,6 @@ public class WpsService implements IEasyPoiWpsService {
         return "";
     }
 
-    @Override
     public int getFileSize(String filepath) {
         InputStream is = null;
         try {
@@ -38,7 +37,6 @@ public class WpsService implements IEasyPoiWpsService {
         return 2048;
     }
 
-    @Override
     public String getDownLoadUrl(String filepath) {
         return "http://easypoi.wupaas.com/" + filepath;
     }

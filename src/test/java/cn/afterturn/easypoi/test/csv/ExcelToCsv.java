@@ -1,6 +1,7 @@
 package cn.afterturn.easypoi.test.csv;
 
-import cn.afterturn.easypoi.test.csv.entity.CsvExportParams;
+import cn.afterturn.easypoi.csv.CsvExportUtil;
+import cn.afterturn.easypoi.csv.entity.CsvExportParams;
 import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ImportParams;
 import cn.afterturn.easypoi.handler.inter.IReadHandler;
