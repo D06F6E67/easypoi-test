@@ -47,7 +47,7 @@ public class TemplateForEachSumTest {
         if (!savefile.exists()) {
             savefile.mkdirs();
         }
-        FileOutputStream fos = new FileOutputStream("D:/home/excel/foreach_sum_out.xlsx");
+        FileOutputStream fos = new FileOutputStream("/Users/lee/Downloads/foreach_sum_out.xlsx");
         workbook.write(fos);
         fos.close();
     }

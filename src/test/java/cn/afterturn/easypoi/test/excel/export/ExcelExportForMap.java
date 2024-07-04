@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map;
 
 //import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import cn.afterturn.easypoi.util.PoiMergeCellUtil;
+import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.Test;
 
@@ -102,7 +104,13 @@ public class ExcelExportForMap {
 
             Workbook workbook = ExcelExportUtil.exportExcel(new ExportParams("员工通讯录", "通讯录"),
                 entity, list);
-            FileOutputStream fos = new FileOutputStream("D:/home/excel/ExcelExportForMap.testMerge.xls");
+            // Sheet sheet = workbook.getSheetAt(0);
+            // Map<Integer, int[]> mergeMap = new HashMap<>();
+            // // mergeMap.put(0, null);
+            // mergeMap.put(2, null);
+            // PoiMergeCellUtil.mergeCells(sheet, mergeMap, 2);
+
+            FileOutputStream fos = new FileOutputStream("/Users/lee/Downloads/test.xls");
             workbook.write(fos);
             fos.close();
         } catch (FileNotFoundException e) {
@@ -141,5 +149,4 @@ public class ExcelExportForMap {
             e.printStackTrace();
         }
     }
-
 }

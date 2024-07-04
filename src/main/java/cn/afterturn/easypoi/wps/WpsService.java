@@ -14,12 +14,12 @@ import java.io.InputStream;
 @Service
 public class WpsService implements IEasyPoiWpsService {
 
-    @Override
+    // @Override
     public String getAppSecret() {
         return "";
     }
 
-    @Override
+    // @Override
     public String getAppId() {
         return "";
     }

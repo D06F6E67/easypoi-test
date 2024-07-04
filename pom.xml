@@ -52,13 +52,13 @@
 		<dependency>
 			<groupId>cn.afterturn</groupId>
 			<artifactId>easypoi-spring-boot-starter</artifactId>
-			<version>4.4.0</version>
+			<version>4.5.2</version>
 		</dependency>
 
 		<dependency>
 			<groupId>cn.afterturn</groupId>
 			<artifactId>easypoi-wps</artifactId>
-			<version>4.4.0</version>
+			<version>4.5.2</version>
 		</dependency>
 
 		<dependency>
@@ -120,6 +120,24 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+	<repositories>
+        <repository>
+            <id>maven-ali</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
 	<build>
 		<finalName>easypoi</finalName>

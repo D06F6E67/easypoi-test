@@ -25,7 +25,7 @@ public class ExcelExportTemplateColFeTest {
 		params.setColForEach(true);
 		Workbook book = ExcelExportUtil.exportExcel(params, value);
 		//PoiMergeCellUtil.mergeCells(book.getSheetAt(0), 1, 0,1);
-		FileOutputStream fos = new FileOutputStream("D:/home/excel/ExcelExportTemplateColFeTest_one.xlsx");
+		FileOutputStream fos = new FileOutputStream("/Users/lee/Downloads/test.xlsx");
 		book.write(fos);
 		fos.close();
 
@@ -38,7 +38,7 @@ public class ExcelExportTemplateColFeTest {
 				"doc/for_Col.xlsx", 1);
 		params.setColForEach(true);
 		Workbook book = ExcelExportUtil.exportExcel(params, value);
-		FileOutputStream fos = new FileOutputStream("D:/home/excel/ExcelExportTemplateColFeTest_two.xlsx");
+		FileOutputStream fos = new FileOutputStream("/Users/lee/Downloads/test.xlsx");
 		book.write(fos);
 		fos.close();
 
